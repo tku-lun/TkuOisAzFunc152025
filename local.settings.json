@@ -1,0 +1,9 @@
+{
+    "IsEncrypted": false,
+    "Values": {
+        "AzureWebJobsStorage": "DefaultEndpointsProtocol=https;EndpointSuffix=core.windows.net;AccountName=hw152025;AccountKey=WH76ZV0MX2ZBwUHbt24oVkp2b0Sdtrc+yynaFvKtpGJ4bOx8aFBjTkHDkmBqkF7FbthUBTQ1VPwMZPWH2omcNA==",
+        "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+        "EmailSender": "152025@o365.tku.edu.tw",
+        "SendGridApiKey": "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"
+    }
+}
