@@ -17,17 +17,17 @@ namespace TkuOisAzFunc152025
         public static void Run(
             [QueueTrigger("employees", Connection = "AzureWebJobsStorage")]string rowKey,
             [Table("employees", "employees", "{queuetrigger}")] Employee employee,
-            [SendGrid(ApiKey = "SendGridApiKey")] out SendGridMessage message,
+            //[SendGrid(ApiKey = "SendGridApiKey")] out SendGridMessage message,
             ILogger log)
         {
             log.LogInformation($" Employee PartitionKey={employee.PartitionKey}, RowKey={employee.RowKey}, EmpName={employee.EmpName}, EmpEmail={employee.EmpEmail}, EmpName={employee.EmpName}");
-
+            /*
             message = new SendGridMessage();
             message.From = new EmailAddress(Environment.GetEnvironmentVariable("EmailSender"));
             message.Subject = $"{employee.RowKey} + 's personal information";
             message.HtmlContent = $"employee.RowKey={employee.RowKey}, employee.EmpName={employee.EmpName}, employee.EmpEmail={employee.EmpEmail}";
             message.AddTo("152025@o365.tku.edu.tw");
-
+            */
             log.LogInformation("Finished.");
         }
     }
