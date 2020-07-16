@@ -24,7 +24,8 @@ namespace TkuOisAzFunc152025
             await rowKeyQueue.AddAsync(data.RowKey);
             log.LogInformation($"RowKey ID : {data.RowKey} has been received.");
 
-            return new OkObjectResult($"Success! EmailSender={Environment.GetEnvironmentVariable("EmailSender")}");
+
+            return new OkObjectResult($"We've got your employee id={data.RowKey}, we'll send your information later.");
         }
     }
 }
